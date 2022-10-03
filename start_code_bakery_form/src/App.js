@@ -14,7 +14,6 @@ function App() {
       <main>
         <RecipeContainer />
         <Search />
-        <CakeForm />
       </main>
     </>
   );

@@ -1,5 +1,6 @@
 import {useState} from "react"
 import RecipeList from '../components/RecipeList'
+import CakeForm from "../components/CakeForm"
 
 const RecipeContainer = () => {
 
@@ -26,9 +27,25 @@ const RecipeContainer = () => {
         }
     ])
 
+    const addNewRecipe = newRecipe => {
+        const updatedCakes = [...cakes, newRecipe];
+        setCakes(updatedCakes);
+    }
+
+    const averageRating = (cakes)=>{
+        return cakes.reduce((total, cake) => {
+            console.log(cake.rating);
+            return total + cake.rating }
+            , 0)
+             / cakes.length
+    }
+    console.log("-----");
+    console.log(averageRating(cakes));
+
     return (
         <>
-            <RecipeList cakes={cakes} />
+            <RecipeList cakes={cakes} averageRating={averageRating} />
+            <CakeForm onSubmit={addNewRecipe} />
         </>
     );
 }

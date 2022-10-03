@@ -1,7 +1,6 @@
+import Recipe from "./Recipe";
 
-
-const RecipeList = ({cakes}) => {
-
+const RecipeList = ({cakes,averageRating}) => {
     return (
         <>
             <section>
@@ -9,14 +8,7 @@ const RecipeList = ({cakes}) => {
                     cakes.map((cake, index) => {
                         return(
                             <div key={index}>
-                                <h3>{cake.cakeName}</h3>
-                                <ul>
-                                    {cake.ingredients.map((ingredient, index) => {
-                                        return(
-                                            <li key={index}>{ingredient}</li>
-                                        )
-                                    })}
-                                </ul>
+                                <Recipe cakeName={cake.cakeName} ingredients={cake.ingredients} rating={cake.rating} />
                             </div>
                         )
                     })
@@ -24,7 +16,7 @@ const RecipeList = ({cakes}) => {
             </section>
             <section>
                 <h4>Average cake rating: </h4>
-                <p>{(cakes.reduce((total, cake) => total + cake.rating, 0) / cakes.length)}</p>
+                <p>{averageRating(cakes)}</p>
             </section>
         </>
     )
