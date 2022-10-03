@@ -38,23 +38,12 @@ const RecipeContainer = () => {
     
     }
 
-    const averageRating = (cakes)=>{
-        return cakes.reduce((total, cake) => {
-            console.log(cake.rating);
-            return total + cake.rating }
-            , 0)
-             / cakes.length
-    }
-
-    // const [avgRating,setAvgRating] = useState(averageRating(cakes))
-    console.log("-----");
-    console.log(averageRating(cakes));
-
     return (
         <>
-            <RecipeList cakes={cakes} averageRating={averageRating(cakes)} />
-            <CakeForm onSubmit={addNewRecipe} />
             <Search onSubmit={searchRecipes} />
+            <RecipeList cakes={cakes} />
+            <CakeForm onSubmit={addNewRecipe} />
+            
         </>
     );
 }

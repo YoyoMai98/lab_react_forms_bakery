@@ -22,18 +22,6 @@ const Search = ({onSubmit}) => {
         }else{
             setIsSearched(false)
         }
-        
-        
-        // setSearchedCake(onSubmit(cakeName)[0])
-        // setName("")
-
-        // if (isSearched) {
-         
-        // return (
-        //     <Recipe cakeName={searchedCake.cakeName} ingredients={searchedCake.ingredients} rating={searchedCake.rating}/>
-        // )
-        // }
-        // setIsSearched(false)
     }
 
  

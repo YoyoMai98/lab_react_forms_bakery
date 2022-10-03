@@ -1,6 +1,6 @@
 import Recipe from "./Recipe";
 
-const RecipeList = ({cakes,averageRating}) => {
+const RecipeList = ({cakes}) => {
     return (
         <>
             <section>
@@ -16,7 +16,7 @@ const RecipeList = ({cakes,averageRating}) => {
             </section>
             <section>
                 <h4>Average cake rating: </h4>
-                <p>{averageRating}</p>
+                <p>{(cakes.reduce((total, cake) => total + cake.rating, 0)/ cakes.length)}</p>
             </section>
         </>
     )
