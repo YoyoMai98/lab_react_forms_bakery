@@ -1,9 +1,4 @@
-# REACT FORMS LAB
-
-## Lab Overview
-
-Create a basic React app which displays provided recipes on the front-end by use of the `.map()` method for objects, by first housing the data in state. Further, be able to add a new recipe to this list using a HTML form. This form makes further use of state.
-
+# React Forms Lab (Bakery cont'd)
 
 ## Aims
 
@@ -12,26 +7,24 @@ Create a basic React app which displays provided recipes on the front-end by use
 - To provide more practice with using the **USESTATE** HOOK
 - To provide practice of **MAPPING** content (the provided list & json) to JSX components
 
+## Intro
+This lab references your previous Bakery lab, where you were able to set up a handful of components, including a form, and render them to the page. Your task today is to introduce a data set (an array of cake objects, provided below) and ensure that your form is fully functional, so that a new cake recipe can be added and viewed in the list of recipes. You will need to work with `state`, `props` and `controlled components`.
 
-## Lab Steps
+You should use the start code provided with this lab, which picks up where your previous lab left off.
+
+## MVP
 
 We would like you to create a React app that (a) renders a list of cake recipes and (b) allows a user to add a new cake to the list via a form.
-Please follow through these initial steps sequentially. The three extension tasks can be attempted in any order.
 
-1. Create a new React app `create-react-app {appName}`
-2. Using the data set (below), save this list into state using the `useState` hook (remember to import!)
-3. Create a constant which equals this data mapped to multiple JSX objects (such as a series of `<p>` elements). Make use of only one property at first
-4. Call this constant within the `return` function to render it on the front-end (remember to use `{}` to denote JavaScript within the `return`!)
-5. Abstract this constant out, placing it in it's own component, passing in the initial state from above as a prop
-6. Expand out this mapping process to make use of the other two properties (could you make use of another component here?)
-7. Create a form component for adding in a new recipe at the bottom of the page
-8. Add functionality to your form to manage adding the submitted data to your original state from Step 2 (remember to prevent the default behaviour of the form on-submit so that the page doesn't refresh!)
+- You may wish to start with a diagram to make it clear what the data flow in your app should be
+- Introduce the data set (list of cakes) as `state` to your React app. It is no longer suitable for your `RecipeList` component to store your data, not least as you will shortly be implementing a functioning form.
+- Allow your app to render your list of cakes - you will need to pass data as props to the relevent component(s)
+- Once you have ascertained that you can render a list of cakes from a data set, set to work making your `CakeForm` fully functional. Remember a form in React is usually a controlled component and should have its own state. On submission of your form, your application should re-render your list of cakes to include the new addition.
 
-**Extensions:**
+## Extensions
 
-1. Add basic styling to your entire page using CSS. Add in the extra navigation element seen in the wireframe
-2. Add in some basic form validation so that the rating can only be the values 1 through 5, and so that an empty form cannot be submitted
-3. Make your search bar within the header section functional (filtering the recipes by name). Ensure that the filter is case-insensitive
+- Write the necessary code to make your `Search` component fully functional (hint: remeber, it's just another form!)
+- Add basic styling to your entire page using CSS
 
 
 ## Wireframe Design
