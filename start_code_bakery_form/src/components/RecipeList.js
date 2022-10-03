@@ -1,6 +1,7 @@
 import Recipe from "./Recipe";
 
 const RecipeList = ({cakes}) => {
+    console.log(cakes);
     return (
         <>
             <section>

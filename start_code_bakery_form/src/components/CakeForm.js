@@ -21,7 +21,7 @@ const CakeForm = ({onSubmit}) => {
         const newCake ={
             cakeName: name,
             ingredients: ingredients,
-            rating: rating
+            rating: +rating
         }
         setName("")
         setIngredients("")
