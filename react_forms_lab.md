@@ -31,7 +31,7 @@ We would like you to create a React app that (a) renders a list of cake recipes 
 
 Below is a simple wireframe design that you can optionally use. Please note that this exercise is focussed primarily on the building of a functioning form and the mapping of content, not CSS.
 
-<img src="./react_form_wireframe.png" alt="Example wireframe including a navigation bar with title, three anchors and a search bar. Six recipe cards are shown below in their own section followed by a form which takes in a recipe name, set of ingredients and rating"/>
+![img](https://github.com/YoyoMai98/lab_react_forms_bakery/blob/main/react_form_wireframe.png)
 
 
 ## Data Set
