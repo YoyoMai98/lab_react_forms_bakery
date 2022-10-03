@@ -1,6 +1,7 @@
 import {useState} from "react"
 import RecipeList from '../components/RecipeList'
 import CakeForm from "../components/CakeForm"
+import Search from "../components/Search"
 
 const RecipeContainer = () => {
 
@@ -32,6 +33,11 @@ const RecipeContainer = () => {
         setCakes(updatedCakes);
     }
 
+    const searchRecipes = (recipeName) => {
+        return cakes.filter(cake=>recipeName===cake.cakeName);
+    
+    }
+
     const averageRating = (cakes)=>{
         return cakes.reduce((total, cake) => {
             console.log(cake.rating);
@@ -39,13 +45,16 @@ const RecipeContainer = () => {
             , 0)
              / cakes.length
     }
+
+    // const [avgRating,setAvgRating] = useState(averageRating(cakes))
     console.log("-----");
     console.log(averageRating(cakes));
 
     return (
         <>
-            <RecipeList cakes={cakes} averageRating={averageRating} />
+            <RecipeList cakes={cakes} averageRating={averageRating(cakes)} />
             <CakeForm onSubmit={addNewRecipe} />
+            <Search onSubmit={searchRecipes} />
         </>
     );
 }

@@ -13,7 +13,6 @@ function App() {
       </header>
       <main>
         <RecipeContainer />
-        <Search />
       </main>
     </>
   );

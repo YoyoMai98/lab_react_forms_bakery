@@ -16,7 +16,7 @@ const RecipeList = ({cakes,averageRating}) => {
             </section>
             <section>
                 <h4>Average cake rating: </h4>
-                <p>{averageRating(cakes)}</p>
+                <p>{averageRating}</p>
             </section>
         </>
     )
