@@ -1,8 +1,8 @@
 import NavBar from "./components/NavBar";
 import Title from "./components/Title";
-import RecipeList from "./components/RecipeList";
 import Search from "./components/Search";
 import CakeForm from "./components/CakeForm";
+import RecipeContainer from "./containers/RecipeContainer";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Title />
       </header>
       <main>
-        <RecipeList />
+        <RecipeContainer />
         <Search />
         <CakeForm />
       </main>
